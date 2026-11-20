@@ -56,13 +56,13 @@ const StyledItem = styled.button<StyledItemProps>`
   align-items: center;
   background: ${({ active, variant }) =>
     active || variant === 'placeholder'
-      ? themeCssVariables.background.transparent.light
+      ? '#fff0e9'
       : 'transparent'};
   border: ${({ isSelectedInEditMode }) =>
     isSelectedInEditMode
       ? `1px solid ${themeCssVariables.color.blue}`
       : '1px solid transparent'};
-  border-radius: ${themeCssVariables.border.radius.md};
+  border-radius: 9px;
   box-sizing: border-box;
   color: ${({ active, isSoon, variant }) => {
     if (variant === 'placeholder') {
@@ -72,7 +72,7 @@ const StyledItem = styled.button<StyledItemProps>`
       return themeCssVariables.font.color.tertiary;
     }
     if (active === true) {
-      return themeCssVariables.font.color.primary;
+      return '#9b3000';
     }
     if (isSoon) {
       return themeCssVariables.font.color.light;
@@ -86,7 +86,7 @@ const StyledItem = styled.button<StyledItemProps>`
   font-size: ${themeCssVariables.font.size.md};
   height: ${({ isNavigationDrawerExpanded }) =>
     isNavigationDrawerExpanded
-      ? themeCssVariables.spacing[7]
+      ? '36px'
       : `${NAVIGATION_DRAWER_COLLAPSED_BUTTON_SIZE}px`};
   margin-top: ${({ indentationLevel }) =>
     indentationLevel === 2 ? '2px' : '0'};
@@ -111,7 +111,7 @@ const StyledItem = styled.button<StyledItemProps>`
       : `calc(100% - ${themeCssVariables.spacing['1.5']} + ${themeCssVariables.spacing[1]} + ${hasRightOptions ? themeCssVariables.spacing['0.5'] : themeCssVariables.spacing[1]})`};
 
   &:hover {
-    background: ${themeCssVariables.background.transparent.light};
+    background: #f7f8fa;
     color: ${({ variant }) =>
       variant === 'tertiary'
         ? themeCssVariables.font.color.tertiary
