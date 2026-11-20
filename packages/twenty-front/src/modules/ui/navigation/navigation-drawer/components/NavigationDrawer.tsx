@@ -34,6 +34,9 @@ const StyledAnimatedContainer = styled.div<{
   isResizing: boolean;
 }>`
   height: 100%;
+  background: #ffffff;
+  border-right: 1px solid #e7e9ef;
+  box-shadow: 10px 0 30px rgba(31, 40, 57, 0.035);
   max-height: 100%;
   overflow: clip;
   position: relative;
@@ -60,6 +63,7 @@ const StyledContainer = styled.div<{
   flex-direction: column;
   height: 100%;
   padding-bottom: ${themeCssVariables.spacing[4]};
+  padding-top: ${themeCssVariables.spacing[1]};
   width: ${({ isExpanded }) =>
     isExpanded ? `var(${NAVIGATION_DRAWER_WIDTH_VAR})` : '100%'};
   @media (max-width: ${MOBILE_VIEWPORT}px) {
@@ -73,7 +77,7 @@ const StyledContent = styled.div`
   flex-direction: column;
   gap: ${themeCssVariables.spacing[2]};
   min-height: 0;
-  padding-left: ${themeCssVariables.spacing[2]};
+  padding: ${themeCssVariables.spacing[2]};
 
   @media (max-width: ${MOBILE_VIEWPORT}px) {
     gap: ${themeCssVariables.spacing[4]};

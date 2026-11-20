@@ -22,11 +22,11 @@ const StyledContainer = styled.div`
 
 const StyledHeaderRow = styled.div`
   align-items: center;
-  border-bottom: 1px solid ${themeCssVariables.border.color.medium};
+  border-bottom: 1px solid #edf0f4;
   box-sizing: border-box;
   display: flex;
   height: ${APP_HEADER_HEIGHT}px;
-  padding: 0 ${themeCssVariables.spacing[2]};
+  padding: 0 ${themeCssVariables.spacing[3]};
 
   @media (max-width: ${MOBILE_VIEWPORT}px) {
     padding: 0 ${themeCssVariables.spacing[7]};
