@@ -43,6 +43,7 @@ const StyledMainColumn = styled.div`
 `;
 
 const StyledContent = styled.div`
+  background: #f6f7fb;
   display: flex;
   flex: 1 1 0;
   min-height: 0;

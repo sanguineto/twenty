@@ -28,6 +28,21 @@ const StyledHeaderRow = styled.div`
   height: ${APP_HEADER_HEIGHT}px;
   padding: 0 ${themeCssVariables.spacing[3]};
 
+  &::before {
+    align-items: center;
+    background: linear-gradient(135deg, #642003, #c23a00);
+    border-radius: 9px;
+    color: #fff;
+    content: 'C';
+    display: flex;
+    font-size: 14px;
+    font-weight: 800;
+    height: 28px;
+    justify-content: center;
+    margin-right: 8px;
+    width: 28px;
+  }
+
   @media (max-width: ${MOBILE_VIEWPORT}px) {
     padding: 0 ${themeCssVariables.spacing[7]};
   }
