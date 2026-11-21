@@ -327,4 +327,6 @@ EXPOSE 2020
 LABEL org.opencontainers.image.source=https://github.com/twentyhq/twenty
 LABEL org.opencontainers.image.description="All-in-one Twenty image for local development and SDK usage. Includes PostgreSQL, Redis, ClickHouse, server, and worker."
 
-ENTRYPOINT ["/init"]
+# Railway supplies PostgreSQL and Redis separately. Starting the local s6
+# bundle here would boot a second database and conflict with those services.
+CMD ["node", "/app/packages/twenty-server/dist/main"]
