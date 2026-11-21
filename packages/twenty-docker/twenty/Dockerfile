@@ -300,3 +300,9 @@ LABEL org.opencontainers.image.source=https://github.com/twentyhq/twenty
 LABEL org.opencontainers.image.description="All-in-one Twenty image for local development and SDK usage. Includes PostgreSQL, Redis, server, and worker."
 
 ENTRYPOINT ["/init"]
+
+
+# Railway target: web CRM backed by Railway PostgreSQL/Redis services.
+# Keep this final stage so Railway builds the production server/frontend image,
+# not the all-in-one local-development stack above.
+FROM twenty AS railway
